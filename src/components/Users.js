@@ -11,6 +11,16 @@ class Users extends React.Component {
       more: "Hi!",
     };
   }
+  componentDidUpdate() {
+    // try {
+
+    // } catch (err) {
+    //   // handle error
+    // }
+    if (this.props.users.length === 0) {
+      throw new Error("No users provided!");
+    }
+  }
 
   // we have to make sure that "this" keyword inside our method reffers to the surrounding class
   toggleUsersHandler = () => {
